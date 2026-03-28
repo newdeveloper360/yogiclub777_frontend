@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+table td, table th{
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+  min-width: 80px;
+}
+
+
+/* Top RightNotification */
+.swal2-popup.swal2-toast .swal2-icon {
+    width: 1em !important;
+    min-width: 1em !important;
+    height: 1em !important;
+}
+.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
+    font-size: 16px !important;
+}
+.swal2-popup.swal2-toast .swal2-title {
+  margin: 0px 15px 3px 0px !important;
+  font-size: 13px !important;
+}
+.swal2-popup.swal2-toast .swal2-html-container {
+  margin: 0px 15px 0px 0px !important;
+  font-size: 12px !important;
+}
+.swal2-popup.swal2-toast {
+    padding: 10px !important;
+}
+div:where(.swal2-container) div:where(.swal2-popup) {
+    border-radius: 10px !important;
+}
+
+/* Notification box */
+/* div:where(.swal2-icon) {
+  width: 2em !important;
+  height: 2em !important;
+  margin: 1.5em auto .6em !important;
+}
+div:where(.swal2-icon) .swal2-icon-content {
+  font-size: 1.75em !important;
+}
+div:where(.swal2-container) .swal2-html-container {
+  margin: 0em 1.6em .3em !important;
+}
+div:where(.swal2-container) h2:where(.swal2-title) {
+  padding: .1em 1em 0 !important;
+  font-size: 15px !important;
+}
+div:where(.swal2-container) .swal2-html-container {
+    font-size: 13px !important;
+}
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  font-size: 13px !important;
+}
+div:where(.swal2-container) button:where(.swal2-styled)
+{
+  padding: 4px 11px !important;
+}
+div:where(.swal2-container) div:where(.swal2-actions) {
+  margin: 2px !important;
+} */
+
+
+/* ============== New Style Like as Android App  =============== */
+.bg-new-white{  
+  background: #EEEEEE;
+}
+.text-new-black{
+  color: #656567;
+}
+
+.text-yellow-color{
+  color: #FCB52E;
+}
+.bg-yellow-color{
+  background : #FCB52E;
+}
