@@ -19,6 +19,7 @@ import { setBetModelCookie, getCookie } from "../utils/CookieGetSet";
 import { deleteUserDataHistory } from "../repository/HistoryRepository";
 
 import Play from '../views/Play';
+import HomePageBanner from "../components/HomePageBanner";
 
 const Home = () => {
   let { appData } = useSelector((state) => state.appData.appData);
@@ -54,11 +55,15 @@ const Home = () => {
   return (
     <div className="py-3 px-1 pt-1 pb-5 bg-new-white">
       <marquee
-        className="mt-1 rounded-md text-orange text-sm mb-2"
+        className="mt-1 rounded-md text-orange text-sm mb-1"
         scrollamount="6"
       >
         {appData?.home_message}
       </marquee>
+
+      <div className="mb-3">        
+        <HomePageBanner bannerImageUrl={appData?.homepage_image_url} />
+      </div>
 
       <div className="grid grid-cols-2 gap-2 mb-1">
         <div className="flex flex-col items-center justify-center">
