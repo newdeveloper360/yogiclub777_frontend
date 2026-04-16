@@ -1,4 +1,4 @@
-function HomePageBanner({ bannerImageUrl }) {
+function HomePageBanner({ bannerImageUrl, sliderUrl }) {
     const styles = {
         img: {
             width: '100%',
@@ -9,10 +9,10 @@ function HomePageBanner({ bannerImageUrl }) {
     }
     
     return (
-        <div>
-            {bannerImageUrl && (
+        <div className="mb-3">
+            <a href={sliderUrl}>
                 <img src={bannerImageUrl} alt="Home Page Banner" style={styles.img} />
-            )}
+            </a>
         </div>
     )
 }

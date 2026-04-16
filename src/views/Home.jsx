@@ -61,9 +61,10 @@ const Home = () => {
         {appData?.home_message}
       </marquee>
 
-      <div className="mb-3">        
-        <HomePageBanner bannerImageUrl={appData?.homepage_image_url} />
-      </div>
+      {/* Slider Banner */}
+      {appData?.homepage_image_url &&
+        <HomePageBanner bannerImageUrl={appData?.homepage_image_url} sliderUrl={appData?.slider_url} />
+      }
 
       <div className="grid grid-cols-2 gap-2 mb-1">
         <div className="flex flex-col items-center justify-center">
