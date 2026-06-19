@@ -83,8 +83,8 @@ const Sidebar = ({ toggleSideBar }) => {
       // onClick: async (e) => {
       //   e.preventDefault();
       //   const shareText = `Share this Amazing game app with your friends! Use My Refer Code: ${user?.own_code}`;
-      //   // const shareUrl = "https://yogiclub777.com";
-      //   const shareUrl = `https://new.yogiclub777.com/auth/login?referral_code=${user?.own_code}`;
+      //   // const shareUrl = "https://yogiclub777.site";
+      //   const shareUrl = `https://new.yogiclub777.site/auth/login?referral_code=${user?.own_code}`;
 
       //   if (navigator.share) {
       //     try {
@@ -116,7 +116,7 @@ const Sidebar = ({ toggleSideBar }) => {
         e.preventDefault();
       
         const shareText = `Share this Amazing game app with your friends! Use My Refer Code: ${user?.own_code}`;
-        const shareUrl = `https://new.yogiclub777.com/auth/login?referral_code=${user?.own_code}`;
+        const shareUrl = `https://new.yogiclub777.site/auth/login?referral_code=${user?.own_code}`;
         const fullMessage = encodeURIComponent(shareText + " " + shareUrl);
       
         // ✅ ANDROID + CHROME + PWA - Web Share API

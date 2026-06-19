@@ -1,5 +1,5 @@
 import axios from "axios";
-export const BASE_URL = "https://api.yogiclub777.com/api";  // Live
+export const BASE_URL = "https://api.yogiclub777.site/api";  // Live
 export const ONESIGNAL_APP_ID = '9b3647cd-a369-468d-b4b9-0734a6424ca1';
 // export const BASE_URL = "http://127.0.0.1:8002/api";   // Demo
 
