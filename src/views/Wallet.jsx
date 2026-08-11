@@ -593,9 +593,9 @@ const Wallet = () => {
             {/* <p className="px-3 mt-1 text-xs text-center text-red-600">
               आपका पैसा 5 से 10 मिनट मैं एड हो जाएगा
             </p> */}
-            <p className="px-3 mt-2 text-xs text-center text-blue-400">
+            {/* <p className="px-3 mt-2 text-xs text-center text-blue-400">
               Win Amount :- <b>₹{ user?.withdrawal_balance || 0 }</b>
-            </p>
+            </p> */}
             <p className="px-3 mt-2 text-sm font-semibold text-center text-black">
               Bank Account Details
             </p>

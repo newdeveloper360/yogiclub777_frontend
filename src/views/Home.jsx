@@ -54,12 +54,12 @@ const Home = () => {
 
   return (
     <div className="py-3 px-1 pt-1 pb-5 bg-new-white">
-      <marquee
+      {/* <marquee
         className="mt-1 rounded-md text-orange text-sm mb-1"
         scrollamount="6"
       >
         {appData?.home_message}
-      </marquee>
+      </marquee> */}
 
       {/* Slider Banner */}
       {appData?.homepage_image_url &&
@@ -86,7 +86,7 @@ const Home = () => {
       </div>
 
       <div className="grid grid-cols-2 gap-2">
-        {appData?.whatsapp_enable && (
+        {appData?.whatsapp_enable == true && (
            <div className="flex items-center gap-2 text-start">
             <a 
               href={`https://wa.me/${appData?.whatsapp_number}`} 
@@ -98,7 +98,7 @@ const Home = () => {
             </a>
           </div>
         )}
-        {appData?.telegram_enable && (
+        {appData?.telegram_enable == true && (
           <div className="flex items-center justify-end gap-2 text-end">
            <a 
              href={appData?.telegram_link} 
@@ -232,7 +232,7 @@ const Home = () => {
           </div>
         </Link>
       ))} */}
-      {appData.info_dialog_1_message_show_hide &&
+      {appData.info_dialog_1_message_show_hide == true &&
       <Modal isOpen={isOpen} toggle={toggle}>
         <div className='font-semibold relative text-black bg-white rounded-xl'>
           <img src={Logo} className="w-20 h-20 absolute left-1/2 z-9 -top-10 border-4 border-white rounded-full -translate-x-1/2" />
