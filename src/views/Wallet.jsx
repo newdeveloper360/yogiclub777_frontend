@@ -551,7 +551,7 @@ const Wallet = () => {
               minAmount={appData.min_deposit}
               placeholder="Add Amount"
             />
-            <div className="flex justify-center mt-3 mb-2">
+            <div className="flex justify-center mt-3 mb-2 hidden">
               <button
                 type="button"
                 onClick={() => window.open('https://youtube.com/shorts/gM0Jn6z7jNg?si=MAvaRlb8HoeX5buC', '_blank')}
