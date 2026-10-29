@@ -65,6 +65,9 @@ const Home = () => {
       {appData?.homepage_image_url &&
         <HomePageBanner bannerImageUrl={appData?.homepage_image_url} sliderUrl={appData?.slider_url} />
       }
+      <Link to="/external-games/aviator" className="aviator-gif-link" aria-label="Play Aviator" >
+        <img src="/aviator.gif" alt="Aviator" className="aviator-gif" />
+      </Link>
 
       <div className="grid grid-cols-2 gap-2 mb-1">
         <div className="flex flex-col items-center justify-center">

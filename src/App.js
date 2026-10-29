@@ -40,6 +40,8 @@ import happyHolidayImg from './assets/imgs/happyHolidays.png'
 // import Pusher from 'pusher-js';
 // import Swal from 'sweetalert2';
 import MarketResult from './views/MarketResult';
+import ExternalGame from './views/ExternalGame';
+import ExternalGameReturn from './views/ExternalGameReturn';
 
 export const routes = [
 	{
@@ -154,6 +156,16 @@ export const routes = [
 				name: 'Play Game',
 			},
 		],
+	},
+	{
+		path: '/external-games/aviator',
+		element: <ExternalGame />,
+		name: 'Aviator',
+	},
+	{
+		path: '/external-games/return',
+		element: <ExternalGameReturn />,
+		name: 'Aviator Return',
 	},
 	{
 		path: '*',
