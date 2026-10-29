@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { getGameHistory } from "../repository/HistoryRepository";
 import { toast } from "react-toastify";
 import { getMarkets } from "../repository/MarketRepository";
 import { deleteSinglePlay } from "../repository/GameRepository";
 import { useDispatch } from "react-redux";
 import Pagination from "../components/Pagination";
+import AviatorHistory from "../components/AviatorHistory";
 import Spinner from "../components/Spinner";
 import Modal from "../components/Modal";
 
 const History = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const isAviatorTab = searchParams.get("tab") === "aviator";
   let [currentPage, setCurrentPage] = useState(1);
   let [marketId, setMarketId] = useState("");
   let [lastPage, setLastPage] = useState(1);
@@ -45,14 +49,25 @@ const History = () => {
     }
   };
   useEffect(() => {
+    if (isAviatorTab) {
+      return;
+    }
     fetchCurrentHistory();
-  }, [currentPage]);
+  }, [currentPage, isAviatorTab]);
+
+  const selectTab = (tab) => {
+    setSearchParams({ tab });
+    setCurrentPage(1);
+  };
 
   useEffect(() => {
     document.title = "My Play History | Yogi Club777";
   }, []);
 
   useEffect(() => {
+    if (isAviatorTab) {
+      return;
+    }
     const fetchMarkets = async () => {
       let { data } = await getMarkets();
       if (data.error === false) {
@@ -62,7 +77,7 @@ const History = () => {
       }
     };
     fetchMarkets();
-  }, []);
+  }, [isAviatorTab]);
 
   const toggleDeleteDialog = () => {
     setDeleteDialog(prevState => !prevState);
@@ -95,6 +110,30 @@ const History = () => {
           </div>
         </div>
       </Modal>
+      <div className="history-tabs" role="tablist" aria-label="Play history">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={!isAviatorTab}
+          className={`history-tab${!isAviatorTab ? " history-tab-active" : ""}`}
+          onClick={() => selectTab("matka")}
+        >
+          Matka
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={isAviatorTab}
+          className={`history-tab${isAviatorTab ? " history-tab-active" : ""}`}
+          onClick={() => selectTab("aviator")}
+        >
+          Aviator
+        </button>
+      </div>
+      {isAviatorTab ? (
+        <AviatorHistory />
+      ) : (
+      <>
       <div className="flex p-3 text-white bg-primary">
         <form onSubmit={e => {
           e.preventDefault();
@@ -256,6 +295,8 @@ const History = () => {
             onChange={setCurrentPage}
           />
         </div>
+      )}
+      </>
       )}
     </>
   );

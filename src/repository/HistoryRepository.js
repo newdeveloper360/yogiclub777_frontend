@@ -18,4 +18,23 @@ function deleteUserDataHistory() {
 	return Repository.get(`/delete-user-data-history`)
 }
 
-export { getDepositHistory, getWithdrawalHistory, getGameHistory, deleteUserDataHistory };
+function getAviatorHistory({ page = 1, status, date }) {
+	const token = localStorage.getItem("authToken");
+	const params = { page };
+	if (status) {
+		params.status = status;
+	}
+	if (date) {
+		params.date = date;
+	}
+
+	return Repository.get("/external-games/aviator/history", {
+		params,
+		headers: {
+			Accept: "application/json",
+			Authorization: token ? `Bearer ${token}` : "",
+		},
+	});
+}
+
+export { getDepositHistory, getWithdrawalHistory, getGameHistory, deleteUserDataHistory, getAviatorHistory };

@@ -84,6 +84,225 @@ div:where(.swal2-container) div:where(.swal2-actions) {
   background : #FCB52E;
 }
 
+.history-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 14px;
+}
+
+.history-tab {
+  width: 100%;
+  padding: 8px;
+  border: 4px solid transparent;
+  font-weight: 600;
+  color: #ffffff;
+  background: #59168B;
+  cursor: pointer;
+}
+
+.history-tab-active {
+  color: #000000;
+  background: #C4B4FF;
+  border-color: #000000;
+}
+
+.history-filters {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  color: #ffffff;
+  background: #7564AB;
+}
+
+.history-filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.history-filter-field {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.history-filter-control {
+  height: 40px;
+  margin-top: 4px;
+  padding: 4px 8px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  color: #000000;
+  background: #ffffff;
+}
+
+.aviator-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.aviator-bet-card {
+  overflow: hidden;
+  background: #F3EFFA;
+  border: 1px solid #7564AB;
+  border-radius: 10px;
+}
+
+.aviator-bet-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px 0;
+}
+
+.aviator-bet-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2430;
+}
+
+.aviator-bet-date {
+  margin-top: 2px;
+  font-size: 10px;
+  color: #8b93a7;
+}
+
+.aviator-status-pill {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.aviator-status-win {
+  color: #178a45;
+  background: #e8f8ee;
+}
+
+.aviator-status-lose {
+  color: #d92d20;
+  background: #fdecec;
+}
+
+.aviator-status-pending {
+  color: #b54708;
+  background: #fff4e5;
+}
+
+.aviator-status-cancel {
+  color: #667085;
+  background: #f2f4f7;
+}
+
+.aviator-bet-amounts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px 10px 6px;
+}
+
+.aviator-bet-stat-label {
+  font-size: 10px;
+  color: #8b93a7;
+}
+
+.aviator-bet-stat-value {
+  margin-top: 1px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2430;
+}
+
+.aviator-bet-net {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: #E4DCF6;
+  font-size: 11px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.aviator-net-positive {
+  color: #178a45;
+}
+
+.aviator-net-negative {
+  color: #d92d20;
+}
+
+.aviator-net-empty {
+  color: #667085;
+}
+
+.aviator-bet-detail-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 7px 10px;
+  border: 0;
+  color: #59168B;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.aviator-bet-chevron {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #7564AB;
+}
+
+.aviator-bet-chevron-open {
+  transform: rotate(180deg);
+}
+
+.aviator-bet-detail {
+  display: grid;
+  gap: 8px;
+  padding: 0 10px 8px;
+}
+
+.aviator-bet-ids {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+}
+
+.aviator-bet-detail-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.aviator-bet-detail-label {
+  margin-top: 0;
+  font-size: 10px;
+  color: #8b93a7;
+}
+
+.aviator-bet-detail-value {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1f2430;
+  overflow-wrap: anywhere;
+}
+
 .aviator-gif-link {
   display: block;
   margin-bottom: 0.75rem;
