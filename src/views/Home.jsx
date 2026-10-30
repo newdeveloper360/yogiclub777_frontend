@@ -6,6 +6,7 @@ import Telegram from "../assets/imgs/telegram.png";
 import BankImage from "../assets/imgs/bank.png";
 import HelpImg from "../assets/imgs/help_img.png";
 import OtherGameImg from "../assets/imgs/other_game.png";
+import AviatorImg from "../assets/imgs/aviator.png";
 
 import WithdrawImg from "../assets/imgs/withdraw_fund.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -65,27 +66,31 @@ const Home = () => {
       {appData?.homepage_image_url &&
         <HomePageBanner bannerImageUrl={appData?.homepage_image_url} sliderUrl={appData?.slider_url} />
       }
-      {appData?.isAviator == true && appData?.aviator_img && (
+      {/* {appData?.isAviator == true && appData?.aviator_img && (
         <Link to="/external-games/aviator" className="aviator-gif-link" aria-label="Play Aviator">
           <img src={appData.aviator_img} alt="Aviator" className="aviator-gif" />
         </Link>
-      )}
+      )} */}
 
       <div className="grid grid-cols-2 gap-2 mb-1">
         <div className="flex flex-col items-center justify-center">
-          <Link to="/deposit-chat" className="flex items-center justify-center w-full px-2 py-2 mb-2 text-xs text-white bg-orange-300 rounded-full shadow-md bg-primary">
-            <img className="me-2" style={{ width: "32px" , height: "32px" }} alt="HelpImg" src={HelpImg} /> Help Chat / सहायता चैट
+          <Link to="/deposit-chat" className="flex items-center justify-start w-full px-2 py-2 mb-2 text-xs text-white bg-orange-300 rounded-full shadow-md bg-primary">
+            <img className="mx-2" style={{ width: "32px" , height: "32px" }} alt="HelpImg" src={HelpImg} /> Help Chat / सहायता चैट
           </Link>
-          <Link to="/wallet?tab=addPoints" className="flex items-center justify-center w-full px-2 py-2 mb-2 text-xs text-white bg-orange-300 rounded-full shadow-md bg-primary">
-            <img className="me-2" style={{ width: "32px" , height: "32px" }} alt="BankImage" src={BankImage} /> Add Funds / धन जोड़ें
+          <Link to="/wallet?tab=addPoints" className="flex items-center justify-start w-full px-2 py-2 mb-2 text-xs text-white bg-orange-300 rounded-full shadow-md bg-primary">
+            <img className="mx-2" style={{ width: "32px" , height: "32px" }} alt="BankImage" src={BankImage} /> Add Funds / धन जोड़ें
           </Link>
         </div>
         <div className="flex flex-col justify-center">
-          <a href={isDisabled ? undefined : appData?.result_history_webview_url} target="_blank" rel="noreferrer" className="flex items-center justify-center w-full px-2 py-2 mb-2 text-xs text-white bg-primary-300 rounded-full shadow-md bg-primary">
+          {/* <a href={isDisabled ? undefined : appData?.result_history_webview_url} target="_blank" rel="noreferrer" className="flex items-center justify-center w-full px-2 py-2 mb-2 text-xs text-white bg-primary-300 rounded-full shadow-md bg-primary">
             <img className="me-2" style={{ width: "32px" , height: "32px" }} alt="OtherGameImg" src={OtherGameImg} /> Other Game / अन्य खेल
-            </a>
-          <Link to="/wallet?tab=withdrawPoints" className="flex items-center justify-center w-full px-2 py-2 mb-2 text-xs text-white bg-orange-300 rounded-full shadow-md bg-primary">
-            <img className="me-2" style={{ width: "32px" , height: "32px" }} alt="WithdrawImg" src={WithdrawImg} /> Withdrawal / निकासी
+            </a> */}
+          <Link to="/external-games/aviator" onClick={(e) => { if (appData?.isAviator != true) { e.preventDefault(); alert("Aviator is not available"); } }} className="aviator-running-border flex items-center justify-start w-full px-2 py-2 mb-2 text-xs text-white bg-primary-300 rounded-full shadow-md bg-primary">
+            <img className="mx-2" style={{ width: "32px" , height: "32px" }} alt="AviatorImg" src={AviatorImg} /> Aviator / अविटर
+          </Link>
+            
+          <Link to="/wallet?tab=withdrawPoints" className="flex items-center justify-start w-full px-2 py-2 mb-2 text-xs text-white bg-orange-300 rounded-full shadow-md bg-primary">
+            <img className="mx-2" style={{ width: "32px" , height: "32px" }} alt="WithdrawImg" src={WithdrawImg} /> Withdrawal / निकासी
           </Link>
         </div>
       </div>
