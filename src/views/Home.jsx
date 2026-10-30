@@ -86,7 +86,7 @@ const Home = () => {
             <img className="me-2" style={{ width: "32px" , height: "32px" }} alt="OtherGameImg" src={OtherGameImg} /> Other Game / अन्य खेल
             </a> */}
           <Link to="/external-games/aviator" onClick={(e) => { if (appData?.isAviator != true) { e.preventDefault(); alert("Aviator is not available"); } }} className="aviator-running-border flex items-center justify-start w-full px-2 py-2 mb-2 text-xs text-white bg-primary-300 rounded-full shadow-md bg-primary">
-            <img className="mx-2" style={{ width: "32px" , height: "32px" }} alt="AviatorImg" src={AviatorImg} /> Aviator / अविटर
+            <img className="mx-2" style={{ width: "32px" , height: "32px" }} alt="AviatorImg" src={AviatorImg} /> AVIATOR
           </Link>
             
           <Link to="/wallet?tab=withdrawPoints" className="flex items-center justify-start w-full px-2 py-2 mb-2 text-xs text-white bg-orange-300 rounded-full shadow-md bg-primary">
